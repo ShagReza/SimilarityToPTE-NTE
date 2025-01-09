@@ -8,8 +8,8 @@ Created on Wed Jan  8 13:40:14 2025
 import pandas as pd
 
 wdr91_path = r'D:\0000-UHN\03-DataAndCodes\Data\HitGen\WDR91.tsv\WDR91.tsv'
-output_path = r'D:\0000-UHN\SimilarityQuestion\ECFP4_Column.tsv'
-Label_path = r'D:\0000-UHN\SimilarityQuestion\Label_Column.tsv'
+output_path = r'.\ECFP4_Column.tsv'
+Label_path = r'.\Label_Column.tsv'
 
 try:
     # Read only the 'ECFP4' column
