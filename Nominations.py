@@ -69,7 +69,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Save as an Excel file
-file_path = r"D:\0000-UHN\SimilarityQuestion\Nominations_SMILES.xlsx"
+file_path = r".\Nominations_SMILES.xlsx"
 df.to_excel(file_path, index=False)
 
 file_path
