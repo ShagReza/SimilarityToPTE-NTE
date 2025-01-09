@@ -10,7 +10,7 @@ from fingerprints import HitGenBinaryECFP4, HitGenFCFP6  # Import the HitGenBina
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Define the path to the Excel file
-Nomination_path = r"D:\0000-UHN\SimilarityQuestion\Nominations_SMILES.xlsx"
+Nomination_path = r".\Nominations_SMILES.xlsx"
 
 # Read the Excel file into a DataFrame
 data = pd.read_excel(Nomination_path)
@@ -48,7 +48,7 @@ plt.colorbar(label='Tanimoto Similarity')
 plt.title('Tanimoto Similarity Matrix')
 plt.xlabel('Fingerprint Index')
 plt.ylabel('Fingerprint Index')
-plt.savefig(r"D:\0000-UHN\SimilarityQuestion\\Tanimoto_Similarity_Matrix.png")
+plt.savefig(r".\\Tanimoto_Similarity_Matrix.png")
 plt.show()
 
 # Convert each 2048-length fingerprint into a comma-separated string
@@ -59,7 +59,7 @@ fingerprint_strings = [','.join(map(str, fp)) for fp in fingerprint_array]
 data['FCFP6'] = fingerprint_strings
 
 # Save the updated DataFrame back to an Excel file (optional)
-output_path = r"D:\0000-UHN\SimilarityQuestion\FCFP6_Nominations_SMILES.xlsx"
+output_path = r".\FCFP6_Nominations_SMILES.xlsx"
 data.to_excel(output_path, index=False)
 
 print(f"Fingerprints added successfully. Updated file saved at: {output_path}")
