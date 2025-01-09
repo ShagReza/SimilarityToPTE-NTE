@@ -11,7 +11,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the Excel file
-file_path = r"D:\0000-UHN\SimilarityQuestion\Max_Similarity_Output.xlsx"
+file_path = r".\Max_Similarity_Output.xlsx"
 data = pd.read_excel(file_path)
 
 # Check if the file has the required columns
