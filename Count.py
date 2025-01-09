@@ -1,7 +1,7 @@
 import pandas as pd
 
 # File path
-file_path = r"D:\0000-UHN\SimilarityQuestion\Similarity_Output.csv"
+file_path = r".\Similarity_Output.csv"
 
 # Load the CSV file
 data = pd.read_csv(file_path)
@@ -47,7 +47,7 @@ for col in [f"Nomination_{i}" for i in range(0, 50)]:
 results_df = pd.DataFrame(results)
 
 # Save results to an Excel file
-output_file_path = r"D:\0000-UHN\SimilarityQuestion\Similarity_Output_Analysis_With_Percentages.xlsx"
+output_file_path = r".\Similarity_Output_Analysis_With_Percentages.xlsx"
 results_df.to_excel(output_file_path, index=False)
 
 output_file_path
