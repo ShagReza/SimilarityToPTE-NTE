@@ -5,13 +5,13 @@ import numpy as np
 
 #-------------------------------------------------------------------------------
 # Load the WDR91 file (first 1000 rows, only 'Label' and 'ECFP4' columns)
-wdr91_path = r'D:\0000-UHN\SimilarityQuestion\Label_Column.tsv'
+wdr91_path = r'.\Label_Column.tsv'
 wdr91_Label = pd.read_csv(wdr91_path, sep='\t', usecols=['Label'])
-wdr91_path = r'D:\0000-UHN\SimilarityQuestion\ECFP4_Column.tsv'
+wdr91_path = r'.\ECFP4_Column.tsv'
 wdr91_df = pd.read_csv(wdr91_path, sep='\t', usecols=['ECFP4'])
 #-------------------------------------------------------------------------------
 # Load the Nomination file (only 'ECFP4' column)
-nomination_path = r"D:\0000-UHN\SimilarityQuestion\BinaryECFP4_Nominations_SMILES.xlsx"
+nomination_path = r".\BinaryECFP4_Nominations_SMILES.xlsx"
 try:
     nomination_df = pd.read_excel(nomination_path, usecols=['ECFP4'])
 except FileNotFoundError:
@@ -51,7 +51,7 @@ output_df = pd.DataFrame(similarity_matrix, columns=[f"Nomination_{j}" for j in 
 output_df['Label'] = wdr91_Label
 
 # Save the output to a CSV or TSV file
-output_path = r'D:\0000-UHN\SimilarityQuestion\Similarity_Output.csv'
+output_path = r'.\Similarity_Output.csv'
 output_df.to_csv(output_path, index=False)
 
 print(f"Similarity matrix saved to: {output_path}")
@@ -64,7 +64,7 @@ max_similarity_df = pd.DataFrame({
 })
 
 # Save the new DataFrame to an Excel file
-max_similarity_output_path = r'D:\0000-UHN\SimilarityQuestion\Max_Similarity_Output.xlsx'
+max_similarity_output_path = r'.\Max_Similarity_Output.xlsx'
 max_similarity_df.to_excel(max_similarity_output_path, index=False)
 
 print(f"Max similarity data saved to: {max_similarity_output_path}")
